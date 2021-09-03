@@ -1,0 +1,15 @@
+version: "3"
+
+services: 
+  db:
+      image: postgres:13.3-alpine
+      container_name: db
+      ports:
+        - "9013:5432"
+      volumes:
+        - D:/docker/postgres/data:/var/lib/postgresql/data
+      environment:
+        - POSTGRES_DB=dev
+        - POSTGRES_USER=thai-bug
+        - POSTGRES_PASSWORD=12022021
+      restart: always

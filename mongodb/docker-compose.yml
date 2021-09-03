@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+    mongodb:
+        image: 'mongo'
+        container_name: 'mongodb'
+        environment:
+            - MONGO_INITDB_DATABASE=dev
+            - MONGO_INITDB_USERNAME=thai
+            - MONGO_INITDB_PASSWORD=93tUkmAZyFmqkU3E
+        volumes:
+            - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+            - ./data:/data/db
+        ports:
+            - '27017-27019:27017-27019'

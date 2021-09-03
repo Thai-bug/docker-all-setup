@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+
+    db_redis:
+        container_name: "redis"
+        image: redis:6.2-alpine
+        command: redis-server /usr/local/etc/redis/redis.conf --requirepass Rzf9TqQwc9NpFKYXUtJcwfumFmJ5djQzWy4k6LxDg4ZVHXMQ
+
+        ports:
+        - "6379:6379"
+        
+        volumes:
+            - ./redis.conf:/usr/local/etc/redis/redis.conf
