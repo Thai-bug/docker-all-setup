@@ -7,7 +7,7 @@ services:
       ports:
         - "9013:5432"
       volumes:
-        - D:/docker/postgres/data:/var/lib/postgresql/data
+        - ./data:/var/lib/postgresql/data
       environment:
         - POSTGRES_DB=dev
         - POSTGRES_USER=thai-bug
