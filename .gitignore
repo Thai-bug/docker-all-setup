@@ -2,3 +2,5 @@ data/
 templates/
 db/
 log/
+es_data/
+es_data02/
